@@ -22,6 +22,13 @@
                     <span class="text">@lang("Organiser.customize")</span>
                 </a>
             </li>
+            
+            <li class="{{ Request::is('*customize*') ? 'active' : '' }}">
+                <a href="{{route('vendors')}}">
+                    <span class="figure"><i class="ico-music4"></i></span>
+                    <span class="text">Service Providers</span>
+                </a>
+            </li>
         </ul>
     </section>
 </aside>

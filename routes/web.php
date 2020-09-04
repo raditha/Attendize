@@ -38,6 +38,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserLogoutController;
 use App\Http\Controllers\UserSignupController;
+use App\Http\Controllers\SpController;
 
 Route::group(
     [
@@ -263,6 +264,10 @@ Route::group(
             Route::get('{organiser_id}/customize',
                 [OrganiserCustomizeController::class, 'showCustomize']
             )->name('showOrganiserCustomize');
+
+            Route::get('vendors',
+                [SpController::class, 'showVendors']
+            )->name('vendors');
 
             Route::post('{organiser_id}/customize',
                 [OrganiserCustomizeController::class, 'postEditOrganiser']
